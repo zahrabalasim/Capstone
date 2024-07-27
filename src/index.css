@@ -53,3 +53,11 @@ button {
         font-size: 1.5rem;
     }
 }
+ /* .App {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px; /* Adjust the gap between cards as needed */
+    /* padding: 16px; Add some padding if necessary */
+  /* }  */
+   

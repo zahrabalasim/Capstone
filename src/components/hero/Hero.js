@@ -1,14 +1,14 @@
 import React from 'react';
 import './HeroStyles.css';
 import Video from '../../assets/Maldivas.gif';
-import CardForm from '../cardform/CardForm'; 
+import CardForm from '../cardform/CardForm'; // Make sure the import path matches the correct file path
 
 function Hero() {
     return (
         <div className='hero'>
             <div className='overlay'></div>
             <video autoPlay loop muted id='video'>
-                <source src={Video} type='video/mp4' />
+                <source src={Video} type='gif' />
             </video>
             <div className="homeContent container">
                 <div className='textDiv'>
