@@ -21,10 +21,10 @@ function Navbar() {
         <li>About us</li>
         <li>Contact us</li>
       </ul>
-      <div className='nav-icons'>
+      {/* <div className='nav-icons'>
         <BiSearch className='icon' style={{marginRight: '1rem'}} />
         <BsPerson className='icon' />
-      </div>
+      </div> */}
       <div className='hamburger' onClick={handleNav}>
       {!nav ? (<HiOutlineMenuAlt4 className='icon' />) : (<AiOutlineClose style={{ color: '#000' }} className='icon' />)}
       </div>
