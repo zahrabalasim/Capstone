@@ -4,25 +4,14 @@ import { FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-500 text-white py-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <span className="text-black">
-          2024 © All Rights Reserved
-        </span>
-        <div className="flex space-x-4">
-          <a href="#" className="text-green-800 hover:text-green-600">
-            <FaInstagram size={24} />
-          </a>
-          <a href="#" className="text-green-800 hover:text-green-600">
-            <FaTwitter size={24} />
-          </a>
-          <a href="#" className="text-green-800 hover:text-green-600">
-            <FaFacebook size={24} />
-          </a>
-        </div>
-      </div>
+    <footer className=" items-center  px-16">
+      <div class="items-centers grid grid-cols-1 justify-between gap-4 border-t border-gray-100 py-6 md:grid-cols-2">
+        <p class="text-sm/6 text-slate-600 max-md:text-center">© 2024 Trippy. All rights reserved.</p>
+        <div class="flex items-center justify-center space-x-4 text-sm/6 font-semibold text-slate-900 md:justify-end"><a href="/privacy-policy">Privacy policy</a><div class="h-4 w-px bg-slate-200"></div></div></div>     
     </footer>
   );
 };
 
 export default Footer;
+
+

@@ -28,6 +28,11 @@ li {
 .mobile-menu {
     display: none;
 }
+ 
+  .mobile-menu.active {
+    display: block;
+    /* other styles */
+  }
 .icon {
     font-size: 1.5rem;
 }
