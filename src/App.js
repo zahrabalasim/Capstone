@@ -1,29 +1,26 @@
 import React from 'react';
 import Navbar from './components/navbar/NavbarTemp';
-import Hero from './components/hero/Hero';
-import RecommendedDestinations from './components/RecommendedDestination';
-import Carousel from "./components/carouselComponent";
-import FeedbackSection from "./components/FeedbackSection";
-import FeedbackModal from './components/FeedbackModal';
-import Footer from './components/Footer';
-import ResultsPage from './results';
+import HomePage from './pages/homePage';
+import ResultsPage from './pages/results';
+import ActivityDetails from './pages/activityDetails';
+import BookingAdvisor from './pages/bookingAdvisor';
+import Finish from './pages/finish';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  let slides = [
-    "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-    "https://wallpapercave.com/wp/wp3386769.jpg",
-    "https://wallpaperaccess.com/full/809523.jpg",
-    "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
-  ];
   return (
-    <div className="w-full m-auto">
-      {/* <ResultsPage /> */}
-      <Hero />
-      <RecommendedDestinations />
-      <Carousel slides={slides} />
-      <FeedbackSection />
-      <Footer />
-    </div>
+    <Router>
+      <div className="w-full m-auto">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/results" element={<ResultsPage />} />
+          <Route path='/activityDetails' element={<ActivityDetails />} />
+          <Route path='/bookingAdvisor' element={<BookingAdvisor />} />
+          <Route path='/finish' element={<Finish/>}/>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

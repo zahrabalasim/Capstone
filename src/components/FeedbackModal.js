@@ -6,7 +6,6 @@ const FeedbackModal = ({ showModal, setShowModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log("Feedback submitted");
     setShowModal(false);
     setShowAlert(true);

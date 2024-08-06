@@ -1,16 +1,14 @@
 import React,{useState} from 'react';
-import ResultsPage from '../../results';
+
 import maldives from '../../assets/maldives.gif';
 import CardForm from '../cardform/CardForm'; 
-import Navbar from '../navbar/NavbarTemp';
+
 
 function Hero() {
     const [isResult,setIsResult]= useState(false)
     return (
         <div className="relative flex items-center justify-center w-full h-screen text-white overflow-hidden">
-            <Navbar />
-
-
+           
             <img src={maldives} alt="Background" className="absolute top-0 left-0 w-full h-full object-cover z-0" />
             <div className="absolute top-16 left-0 flex flex-col items-center justify-center w-full h-auto p-8 pt-32 pb-12 text-center z-20 space-y-12 ">
                 <div className="space-y-8">
