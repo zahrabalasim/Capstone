@@ -24,8 +24,8 @@ export default function Carousel({ slides }) {
   }, [current]);
 
   return (
-    
-    <div className="flex justify-center items-center overflow-hidden relative  w-full mx-auto ">
+    <div className="flex justify-center items-center overflow-hidden relative  mx-auto w-1/2 h-auto mb-4">
+    <div className="flex justify-center items-center overflow-hidden relative  w-full ">
       <div
         className="flex transition ease-out duration-500"
         style={{
@@ -58,6 +58,7 @@ export default function Carousel({ slides }) {
         ))}
       </div>
 
+    </div>
     </div>
   );
 }

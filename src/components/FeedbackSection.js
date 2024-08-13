@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FeedbackModal from './FeedbackModal';
+import feedback from '../assets/feedback.svg';
 
 const FeedbackSection = () => {
   const [showModal, setShowModal] = useState(false);
@@ -9,7 +10,7 @@ const FeedbackSection = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
         <div className="flex justify-center md:w-1/2">
           <img
-            src="https://unblast.com/wp-content/uploads/2020/10/Feedback-Vector-Illustration.jpg" // Replace with your image URL
+            src={feedback} 
             alt="Feedback"
             className="w-full h-64 object-cover rounded-md shadow-md md:w-1/2"
           />

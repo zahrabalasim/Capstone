@@ -5,8 +5,8 @@ import activity1 from '../assets/Destenation1.jpeg';
 import activity2 from '../assets/Destenation2.jpeg';
 import activity3 from '../assets/Destenation3.jpeg';
 function BookingAdvisor() {
-  const navigate =useNavigate();
-  const navigation=()=>{
+  const navigate = useNavigate();
+  const navigation = () => {
     navigate('/finish')
   }
   return (
@@ -17,7 +17,9 @@ function BookingAdvisor() {
         <AgencyImages />
         <BookingForm />
         <div className="text-center">
-          <button className="bg-green-700 text-white py-2 px-8 rounded" onClick={navigation}>Confirm Booking</button>
+          <a href="https://wa.me/+9647515814861?text=I'm%20interested%20in%20your%20booking" className="bg-green-700 text-white py-2 px-8 rounded">
+            Confirm Booking
+          </a>
         </div>
       </div>
     </div>
@@ -36,9 +38,9 @@ const Description = () => (
   <div className="mb-8">
     <h2 className="text-xl font-semibold mb-2">Description</h2>
     <div className="border-t border-gray-700 pt-2">
-    <p className="text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet mauris eu fringilla hendrerit. Nam a mauris imperdiet, sagittis ipsum eleifend, accumsan diam. Phasellus sodales tortor ac condimentum interdum. In congue ultrices libero sit amet gravida. Praesent lacus turpis, aliquam quis molestie sed, laoreet eget libero. Quisque id nibh metus. Pellentesque congue volutpat risus vitae fermentum. Duis non magna in quam lacinia fermentum.
-          </p>
+      <p className="text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet mauris eu fringilla hendrerit. Nam a mauris imperdiet, sagittis ipsum eleifend, accumsan diam. Phasellus sodales tortor ac condimentum interdum. In congue ultrices libero sit amet gravida. Praesent lacus turpis, aliquam quis molestie sed, laoreet eget libero. Quisque id nibh metus. Pellentesque congue volutpat risus vitae fermentum. Duis non magna in quam lacinia fermentum.
+      </p>
     </div>
   </div>
 );
@@ -59,9 +61,9 @@ const AgencyImages = () => (
 const BookingForm = () => (
   <div className="mb-8 bg-white shadow-lg p-4 rounded-xl">
     <form className="space-y-4">
-      <input type="text" placeholder="Name" className="w-full p-2 border border-gray-300 rounded" />
-      <input type="text" placeholder="Phone Number" className="w-full p-2 border border-gray-300 rounded" />
-      <input type="text" placeholder="ADT, CHD, INF" className="w-full p-2 border border-gray-300 rounded" />
+      <input required type="text" placeholder="Name" className="w-full p-2 border border-gray-300 rounded" />
+      <input required type="text" placeholder="Phone Number" className="w-full p-2 border border-gray-300 rounded" />
+      <input required type="text" placeholder="ADT, CHD, INF" className="w-full p-2 border border-gray-300 rounded" />
     </form>
   </div>
 );

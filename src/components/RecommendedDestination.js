@@ -26,18 +26,11 @@ const destinations = [
     imgSrc: 'https://cdn.britannica.com/82/195482-050-2373E635/Amalfi-Italy.jpg',
     title: 'Amalfi Coast, Italy',
   },
-
-// 'https://media-cdn.holidaycheck.com/w_768,h_432,c_fill,q_auto,f_auto/ugc/images/03699e06-8d70-4181-81d9-9d21bdddf97e',
-// 'https://cdn-imgix.headout.com/media/images/c1b3d2ea0dec8ae016c56d0d13691b1c-This%20is%20a%20Photograph%20of%20Galata%20Tower.jpg',
-
-  
-
-
 ];
 
-const RecommendedDestinations = () => {
+const RecommendedDestinations = ({id}) => {
   return (
-    <div className="flex flex-col items-center p-10 bg-transparent">
+    <div id={id} className="flex flex-col items-center p-10 bg-transparent">
       <h2 className="text-3xl font-bold text-green-800 mb-8">Recommended Destinations</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 ">
         {destinations.map((url, index) => (

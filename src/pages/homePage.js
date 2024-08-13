@@ -4,6 +4,7 @@ import RecommendedDestinations from '../components/RecommendedDestination'
 import Carousel from "../components/carouselComponent";
 import FeedbackSection from "../components/FeedbackSection";
 import Footer from '../components/Footer';
+import AboutUs from '../components/aboutUs';
 let slides = [
     "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
     "https://wallpapercave.com/wp/wp3386769.jpg",
@@ -13,11 +14,14 @@ let slides = [
 export default function HomePage() {
   return (
     <div>
-            <Hero />
-      <RecommendedDestinations />
-      <Carousel slides={slides} />
-      <FeedbackSection />
-      <Footer />
+
+
+     <Hero id="home" />
+      <RecommendedDestinations id="recommended" />
+      <Carousel slides={slides} id="carousel" />
+      <AboutUs id="about" /> 
+      <FeedbackSection id="feedback" />
+      <Footer id="footer" />
     </div>
   )
 }

@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <div className="w-full m-auto">
+      <div className="w-full m-auto bg-gray-300">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />

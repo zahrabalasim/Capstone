@@ -1,53 +1,8 @@
-// import React, {useState} from 'react';
-// import { BiSearch } from "react-icons/bi";
-// import { BsPerson } from "react-icons/bs";
-// import { HiOutlineMenuAlt4 } from "react-icons/hi";
-// import { AiOutlineClose } from 'react-icons/ai'
-// import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-
-// import './NavbarStyles.css';
-
-// function Navbar() {
-//   const [nav, setNav] = useState(false);
-//   const handleNav = () =>setNav(!nav);
-//   return (
-//     <div className={nav ? 'navbar navbar-bg' : 'navbar'} >
-//       <div className={nav ? 'logo dark' : 'logo'}>
-//         <h2>Trippy.</h2>
-//       </div>
-//       <ul className='nav-menu'>
-//         <li>Home</li>
-//         <li>Destinations</li>
-//         <li>About us</li>
-//         <li>Contact us</li>
-//       </ul>
-   
-//       <div className='hamburger' onClick={handleNav}>
-//       {!nav ? (<HiOutlineMenuAlt4 className='icon' />) : (<AiOutlineClose style={{ color: '#000' }} className='icon' />)}
-//       </div>
-//       <div className={nav ? 'mobile-menu active' : 'mobile-menu'}>
-//         <ul className='mobile-nav'>
-//         <li>Home</li>
-//         <li>Destinations</li>
-//         <li>About us</li>
-//         <li>Contact us</li>
-//         </ul>
-//         <div className='mobile-menu-bottom'>
-//         <div className='menu-icons'>
-//           <button>Search</button>
-//           <button>Account</button>
-//         </div>
-     
-//       </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Navbar;
 
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -57,11 +12,10 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: 1, text: 'Home' },
-    { id: 2, text: 'Company' },
-    { id: 3, text: 'Resources' },
-    { id: 4, text: 'About' },
-    { id: 5, text: 'Contact' },
+    { id: "1", text: 'Home' },
+    { id: "2", text: 'About' },
+    { id: "3", text: 'Recommended' },
+       { id: "5", text: 'Contact' },
   ];
 
   return (
@@ -73,7 +27,10 @@ const Navbar = () => {
             key={item.id}
             className="p-4 text-white hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black"
           >
-            {item.text}
+           
+        {/* <a key={item.id} href={`#${item.text.toLowerCase()}`}>{item.text}</a> */}
+
+        <AnchorLink href={`#${item.text.toLowerCase()}`} onClick={()=>console.log("TRDST")}>{item.text}</AnchorLink>
           </li>
         ))}
       </ul>
@@ -91,7 +48,9 @@ const Navbar = () => {
             key={item.id}
             className="p-4 text-white border-b border-gray-600 hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer"
           >
-            {item.text}
+
+<a key={item.id} href={`#${item.text.toLowerCase()}`}>{item.text}</a>
+           
           </li>
         ))}
       </ul>
@@ -100,3 +59,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// {navItems.map(item => (
+//   <a key={item.id} href={`#${item.text.toLowerCase()}`}>{item.text}</a>
+// ))}
